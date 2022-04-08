@@ -1,8 +1,8 @@
-#include <>stdio.h>
+#include <stdio.h>
 
 /**
  * main - print lowercase alpha a-z but remove 'q' and 'e'
- * Return: Alwas 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
