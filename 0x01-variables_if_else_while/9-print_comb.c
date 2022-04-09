@@ -1,26 +1,24 @@
 #include <stdio.h>
-/**
- *main - prints hexadecimal base 0123456789abcdef, using putchar
- *Return: Always 0 (Success)
- */
 	
+/**
+* main - prints is posetive, negative
+* or zero
+*Return: returns zero if program exits well.
+ */
+
 int main(void)
 {
-	int n = '0';
-	int a_to_f = 'a';
-	while (n <= '9') /*print 0-9*/
-
+	int c = 0;
+	while (c <= 9)
 	{
-		putchar(n);
-		n++;
-	}
-	while (a_to_f <= 'f') /*print a-f to finish hexbase*/
-
+	putchar(48 + c);
+	if (c != 9)
 	{
-		putchar(a_to_f);
-		a_to_f++;
+	putchar(',');
+	putchar(' ');
 	}
-
+	c++;
+	}
 	putchar('\n');
 	return (0);
 }
