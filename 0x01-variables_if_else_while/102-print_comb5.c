@@ -1,34 +1,49 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- *main - print all combinations of three different digits
- *Return: Always 0 (Success)
+ * main - main block
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Return: 0
  */
-
 int main(void)
 {
-	int one;
-	int ten;
-	int hundred;
+int c = 0;
+int f_d;
+int l_d;
 
-	for (hundred = '0'; hundred <= '9'; hundred++) /*hundreds place*/
-	{
-		for (ten = (hundred + 1); ten <= '9'; ten++) /*tens=100s+1*/
-		{
-			for (one = (ten + 1); one <= '9'; one++) /*ones*/
-			{
-				putchar(hundred);
-				putchar(ten);
-				putchar(one);
-				if (hundred != '7' || ten != '8' || one != '9')
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
+int c2;
+int f_d2;
+int l_d2;
 
-	return (0);
+while (c <= 98)
+{
+f_d = (c / 10 + '0');
+l_d = (c % 10 + '0');
+c2 = 0;
+while (c2 <= 99)
+{
+f_d2 = (c2 / 10 + '0');
+l_d2 = (c2 % 10 + '0');
+
+if (c < c2)
+{
+putchar(f_d);
+putchar(l_d);
+putchar(' ');
+putchar(f_d2);
+putchar(l_d2);
+
+if (c != 98)
+{
+putchar(',');
+putchar(' ');
+}
+}
+c2++;
+}
+c++;
+}
+putchar('\n');
+return (0);
 }
