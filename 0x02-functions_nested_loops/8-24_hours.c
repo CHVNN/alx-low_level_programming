@@ -1,4 +1,3 @@
-table file 23 lines (23 sloc) 395 Bytes
 #include "main.h"
 /**
 *jack_bauer - prints every minute of the day starting from 00:00 to 23:59
