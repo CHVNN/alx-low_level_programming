@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *str;
 
-	var_start(varlist, n);
+	va_start(varlist, n);
 
 	for (i = 0; i < n; i++)
 	{
@@ -33,5 +33,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 
 	printf("\n");
-	var_end(varlist);
+	va_end(varlist);
 }
