@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list varlist;
 	unsigned int x;
 
-	var_start(varlist, n);
+	va_start(varlist, n);
 
 	for (x = 0; x < n; i++)
 	{
@@ -26,5 +26,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 
 	printf("\n");
-	var_end(varlist);
+	va_end(varlist);
 }
