@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	const char t_arg[] = "cifs";
 
-	va_start(valist, format);
+	va_start(varlist, format);
 	while (format && format[i])
 	{
 		j = 0;
